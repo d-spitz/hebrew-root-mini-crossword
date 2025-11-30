@@ -1,0 +1,3307 @@
+{
+  "generated": "2025-11-30T23:18:26.406Z",
+  "totalPuzzles": 105,
+  "rootsUsed": 1519,
+  "puzzles": [
+    {
+      "id": 0,
+      "grid": [
+        "מחל",
+        "אבה",
+        "נאה"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 2,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 1
+        }
+      ],
+      "dayDifficulty": 1
+    },
+    {
+      "id": 1,
+      "grid": [
+        "בגר",
+        "אבד",
+        "סלד"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 2
+        }
+      ],
+      "dayDifficulty": 1
+    },
+    {
+      "id": 2,
+      "grid": [
+        "גור",
+        "אדה",
+        "להב"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 2,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 1
+        }
+      ],
+      "dayDifficulty": 1
+    },
+    {
+      "id": 3,
+      "grid": [
+        "יפה",
+        "אדמ",
+        "הרה"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 2
+        }
+      ],
+      "dayDifficulty": 1
+    },
+    {
+      "id": 4,
+      "grid": [
+        "נזק",
+        "אבד",
+        "הלמ"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 2
+        }
+      ],
+      "dayDifficulty": 1
+    },
+    {
+      "id": 5,
+      "grid": [
+        "דרג",
+        "אבד",
+        "בדד"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 1
+        }
+      ],
+      "dayDifficulty": 1
+    },
+    {
+      "id": 6,
+      "grid": [
+        "גדר",
+        "אבד",
+        "הרה"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 2,
+          "col": 2
+        },
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 0
+        }
+      ],
+      "dayDifficulty": 1
+    },
+    {
+      "id": 7,
+      "grid": [
+        "צרח",
+        "באס",
+        "אהד"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 1
+        }
+      ],
+      "dayDifficulty": 1
+    },
+    {
+      "id": 8,
+      "grid": [
+        "אצר",
+        "בדא",
+        "דדה"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 2,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        }
+      ],
+      "dayDifficulty": 1
+    },
+    {
+      "id": 9,
+      "grid": [
+        "סמא",
+        "אדה",
+        "בדד"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 2,
+          "col": 0
+        }
+      ],
+      "dayDifficulty": 1
+    },
+    {
+      "id": 10,
+      "grid": [
+        "טוה",
+        "בדד",
+        "להק"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 2,
+          "col": 2
+        }
+      ],
+      "dayDifficulty": 1
+    },
+    {
+      "id": 11,
+      "grid": [
+        "ברז",
+        "אבה",
+        "סדר"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 0
+        }
+      ],
+      "dayDifficulty": 1
+    },
+    {
+      "id": 12,
+      "grid": [
+        "יטב",
+        "אבד",
+        "הלל"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 1
+        }
+      ],
+      "dayDifficulty": 1
+    },
+    {
+      "id": 13,
+      "grid": [
+        "כיס",
+        "אבד",
+        "באר"
+      ],
+      "difficulty": 6,
+      "prefilledCells": [
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 0
+        }
+      ],
+      "dayDifficulty": 1
+    },
+    {
+      "id": 14,
+      "grid": [
+        "שבט",
+        "אדה",
+        "באר"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 2
+        }
+      ],
+      "dayDifficulty": 1
+    },
+    {
+      "id": 15,
+      "grid": [
+        "מצה",
+        "אבד",
+        "נאק"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 2,
+          "col": 2
+        },
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 2
+        }
+      ],
+      "dayDifficulty": 2
+    },
+    {
+      "id": 16,
+      "grid": [
+        "שחה",
+        "אבד",
+        "באר"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 2,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 2,
+          "col": 0
+        }
+      ],
+      "dayDifficulty": 2
+    },
+    {
+      "id": 17,
+      "grid": [
+        "סבל",
+        "אדה",
+        "בדה"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        }
+      ],
+      "dayDifficulty": 2
+    },
+    {
+      "id": 18,
+      "grid": [
+        "דהר",
+        "אבד",
+        "בלה"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 0
+        }
+      ],
+      "dayDifficulty": 2
+    },
+    {
+      "id": 19,
+      "grid": [
+        "כנע",
+        "אבד",
+        "באר"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 0
+        }
+      ],
+      "dayDifficulty": 2
+    },
+    {
+      "id": 20,
+      "grid": [
+        "שבק",
+        "אדה",
+        "בדה"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 2
+        }
+      ],
+      "dayDifficulty": 2
+    },
+    {
+      "id": 21,
+      "grid": [
+        "יצע",
+        "אבד",
+        "לטפ"
+      ],
+      "difficulty": 6,
+      "prefilledCells": [
+        {
+          "row": 2,
+          "col": 2
+        },
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 0
+        }
+      ],
+      "dayDifficulty": 2
+    },
+    {
+      "id": 22,
+      "grid": [
+        "שזר",
+        "אבד",
+        "בלה"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 2
+        }
+      ],
+      "dayDifficulty": 2
+    },
+    {
+      "id": 23,
+      "grid": [
+        "רבצ",
+        "אדה",
+        "הדר"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 2
+        },
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 1
+        }
+      ],
+      "dayDifficulty": 2
+    },
+    {
+      "id": 24,
+      "grid": [
+        "גלמ",
+        "אבה",
+        "הבל"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 2
+        }
+      ],
+      "dayDifficulty": 2
+    },
+    {
+      "id": 25,
+      "grid": [
+        "נגה",
+        "אבד",
+        "קבר"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 2,
+          "col": 2
+        },
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 0
+        }
+      ],
+      "dayDifficulty": 2
+    },
+    {
+      "id": 26,
+      "grid": [
+        "בדל",
+        "אבה",
+        "סבב"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 2,
+          "col": 2
+        },
+        {
+          "row": 2,
+          "col": 0
+        }
+      ],
+      "dayDifficulty": 2
+    },
+    {
+      "id": 27,
+      "grid": [
+        "רשפ",
+        "אבד",
+        "הרה"
+      ],
+      "difficulty": 4,
+      "prefilledCells": [
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 0
+        }
+      ],
+      "dayDifficulty": 2
+    },
+    {
+      "id": 28,
+      "grid": [
+        "מקמ",
+        "אבד",
+        "סלד"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 2,
+          "col": 2
+        },
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 1
+        }
+      ],
+      "dayDifficulty": 2
+    },
+    {
+      "id": 29,
+      "grid": [
+        "ירה",
+        "אבד",
+        "הדק"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 2,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 2
+        }
+      ],
+      "dayDifficulty": 2
+    },
+    {
+      "id": 30,
+      "grid": [
+        "סוה",
+        "אדמ",
+        "באר"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 2
+        }
+      ],
+      "dayDifficulty": 3
+    },
+    {
+      "id": 31,
+      "grid": [
+        "לבה",
+        "אדמ",
+        "הדר"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 0
+        }
+      ],
+      "dayDifficulty": 3
+    },
+    {
+      "id": 32,
+      "grid": [
+        "כול",
+        "אדה",
+        "בהה"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 2,
+          "col": 2
+        },
+        {
+          "row": 2,
+          "col": 0
+        }
+      ],
+      "dayDifficulty": 3
+    },
+    {
+      "id": 33,
+      "grid": [
+        "בהל",
+        "אבה",
+        "סלק"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 2,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 0
+        }
+      ],
+      "dayDifficulty": 3
+    },
+    {
+      "id": 34,
+      "grid": [
+        "עצר",
+        "בדא",
+        "דדה"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 2,
+          "col": 2
+        },
+        {
+          "row": 2,
+          "col": 0
+        }
+      ],
+      "dayDifficulty": 3
+    },
+    {
+      "id": 35,
+      "grid": [
+        "תלש",
+        "אבד",
+        "בהל"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 1
+        }
+      ],
+      "dayDifficulty": 3
+    },
+    {
+      "id": 36,
+      "grid": [
+        "מחש",
+        "אבד",
+        "נבל"
+      ],
+      "difficulty": 4,
+      "prefilledCells": [
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 1
+        }
+      ],
+      "dayDifficulty": 3
+    },
+    {
+      "id": 37,
+      "grid": [
+        "ישמ",
+        "אבד",
+        "שקד"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 2,
+          "col": 1
+        }
+      ],
+      "dayDifficulty": 3
+    },
+    {
+      "id": 38,
+      "grid": [
+        "סמר",
+        "אדה",
+        "נדב"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 2,
+          "col": 1
+        }
+      ],
+      "dayDifficulty": 3
+    },
+    {
+      "id": 39,
+      "grid": [
+        "מקד",
+        "אבה",
+        "נצר"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 2,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 0
+        }
+      ],
+      "dayDifficulty": 3
+    },
+    {
+      "id": 40,
+      "grid": [
+        "ערק",
+        "באס",
+        "דהמ"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 0
+        }
+      ],
+      "dayDifficulty": 3
+    },
+    {
+      "id": 41,
+      "grid": [
+        "ידה",
+        "אבד",
+        "לקק"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 2
+        }
+      ],
+      "dayDifficulty": 3
+    },
+    {
+      "id": 42,
+      "grid": [
+        "מסר",
+        "אבד",
+        "נכה"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 2
+        }
+      ],
+      "dayDifficulty": 3
+    },
+    {
+      "id": 43,
+      "grid": [
+        "שענ",
+        "אבד",
+        "בדד"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 2
+        }
+      ],
+      "dayDifficulty": 3
+    },
+    {
+      "id": 44,
+      "grid": [
+        "רעמ",
+        "אבה",
+        "הדר"
+      ],
+      "difficulty": 4,
+      "prefilledCells": [
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 2
+        }
+      ],
+      "dayDifficulty": 3
+    },
+    {
+      "id": 45,
+      "grid": [
+        "זרמ",
+        "באס",
+        "להה"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 2,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 2
+        }
+      ],
+      "dayDifficulty": 4
+    },
+    {
+      "id": 46,
+      "grid": [
+        "מלח",
+        "אבד",
+        "נבל"
+      ],
+      "difficulty": 4,
+      "prefilledCells": [
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 2,
+          "col": 1
+        }
+      ],
+      "dayDifficulty": 4
+    },
+    {
+      "id": 47,
+      "grid": [
+        "נגש",
+        "אבד",
+        "הבל"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 1
+        }
+      ],
+      "dayDifficulty": 4
+    },
+    {
+      "id": 48,
+      "grid": [
+        "פשה",
+        "אבד",
+        "רצפ"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 2,
+          "col": 2
+        }
+      ],
+      "dayDifficulty": 4
+    },
+    {
+      "id": 49,
+      "grid": [
+        "מתנ",
+        "אבד",
+        "נער"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 0
+        }
+      ],
+      "dayDifficulty": 4
+    },
+    {
+      "id": 50,
+      "grid": [
+        "יכל",
+        "אבה",
+        "הדק"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 0
+        }
+      ],
+      "dayDifficulty": 4
+    },
+    {
+      "id": 51,
+      "grid": [
+        "גיר",
+        "אבד",
+        "הלמ"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 2,
+          "col": 0
+        }
+      ],
+      "dayDifficulty": 4
+    },
+    {
+      "id": 52,
+      "grid": [
+        "חשה",
+        "באס",
+        "אבה"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 2
+        },
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 0
+        }
+      ],
+      "dayDifficulty": 4
+    },
+    {
+      "id": 53,
+      "grid": [
+        "חרב",
+        "באר",
+        "בהק"
+      ],
+      "difficulty": 4,
+      "prefilledCells": [
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 2,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 2,
+          "col": 0
+        }
+      ],
+      "dayDifficulty": 4
+    },
+    {
+      "id": 54,
+      "grid": [
+        "גמז",
+        "אדה",
+        "הדר"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 1
+        }
+      ],
+      "dayDifficulty": 4
+    },
+    {
+      "id": 55,
+      "grid": [
+        "צוד",
+        "בדא",
+        "אהב"
+      ],
+      "difficulty": 6,
+      "prefilledCells": [
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        }
+      ],
+      "dayDifficulty": 4
+    },
+    {
+      "id": 56,
+      "grid": [
+        "ולכ",
+        "דאב",
+        "אהד"
+      ],
+      "difficulty": 6,
+      "prefilledCells": [
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 2,
+          "col": 2
+        },
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 2
+        }
+      ],
+      "dayDifficulty": 4
+    },
+    {
+      "id": 57,
+      "grid": [
+        "יעז",
+        "אבה",
+        "הדר"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 0
+        }
+      ],
+      "dayDifficulty": 4
+    },
+    {
+      "id": 58,
+      "grid": [
+        "קשב",
+        "באס",
+        "רפס"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 0
+        }
+      ],
+      "dayDifficulty": 4
+    },
+    {
+      "id": 59,
+      "grid": [
+        "שבה",
+        "אדמ",
+        "באר"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 2,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 2,
+          "col": 0
+        }
+      ],
+      "dayDifficulty": 4
+    },
+    {
+      "id": 60,
+      "grid": [
+        "בטש",
+        "אבד",
+        "סלד"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 2
+        }
+      ],
+      "dayDifficulty": 5
+    },
+    {
+      "id": 61,
+      "grid": [
+        "עגנ",
+        "באס",
+        "דהה"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 0
+        }
+      ],
+      "dayDifficulty": 5
+    },
+    {
+      "id": 62,
+      "grid": [
+        "צרמ",
+        "באס",
+        "אהד"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 0
+        }
+      ],
+      "dayDifficulty": 5
+    },
+    {
+      "id": 63,
+      "grid": [
+        "ארע",
+        "באס",
+        "דהה"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 0
+        }
+      ],
+      "dayDifficulty": 5
+    },
+    {
+      "id": 64,
+      "grid": [
+        "מתג",
+        "אבד",
+        "נעל"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 0
+        }
+      ],
+      "dayDifficulty": 5
+    },
+    {
+      "id": 65,
+      "grid": [
+        "צפנ",
+        "באס",
+        "ארה"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 2,
+          "col": 2
+        }
+      ],
+      "dayDifficulty": 5
+    },
+    {
+      "id": 66,
+      "grid": [
+        "אחר",
+        "בדא",
+        "דדה"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 0
+        }
+      ],
+      "dayDifficulty": 5
+    },
+    {
+      "id": 67,
+      "grid": [
+        "פנמ",
+        "אבד",
+        "רעד"
+      ],
+      "difficulty": 4,
+      "prefilledCells": [
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 1
+        }
+      ],
+      "dayDifficulty": 5
+    },
+    {
+      "id": 68,
+      "grid": [
+        "לפת",
+        "אדה",
+        "הרה"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        }
+      ],
+      "dayDifficulty": 5
+    },
+    {
+      "id": 69,
+      "grid": [
+        "גדש",
+        "אבד",
+        "הבל"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 1
+        }
+      ],
+      "dayDifficulty": 5
+    },
+    {
+      "id": 70,
+      "grid": [
+        "נוא",
+        "אדה",
+        "קהה"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 0
+        }
+      ],
+      "dayDifficulty": 5
+    },
+    {
+      "id": 71,
+      "grid": [
+        "קרא",
+        "באס",
+        "צהר"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 2
+        }
+      ],
+      "dayDifficulty": 5
+    },
+    {
+      "id": 72,
+      "grid": [
+        "סכל",
+        "אבה",
+        "בדה"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 2,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 2
+        }
+      ],
+      "dayDifficulty": 5
+    },
+    {
+      "id": 73,
+      "grid": [
+        "אננ",
+        "באס",
+        "דהה"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 1
+        }
+      ],
+      "dayDifficulty": 5
+    },
+    {
+      "id": 74,
+      "grid": [
+        "כמה",
+        "אדמ",
+        "בדה"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 2,
+          "col": 2
+        },
+        {
+          "row": 2,
+          "col": 0
+        }
+      ],
+      "dayDifficulty": 5
+    },
+    {
+      "id": 75,
+      "grid": [
+        "קשח",
+        "באס",
+        "לבה"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        }
+      ],
+      "dayDifficulty": 6
+    },
+    {
+      "id": 76,
+      "grid": [
+        "מול",
+        "אדה",
+        "נאה"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 2,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 1
+        }
+      ],
+      "dayDifficulty": 6
+    },
+    {
+      "id": 77,
+      "grid": [
+        "הדר",
+        "באס",
+        "לבנ"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 2
+        },
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 1
+        }
+      ],
+      "dayDifficulty": 6
+    },
+    {
+      "id": 78,
+      "grid": [
+        "לוה",
+        "אדמ",
+        "מהר"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 2,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 2,
+          "col": 0
+        }
+      ],
+      "dayDifficulty": 6
+    },
+    {
+      "id": 79,
+      "grid": [
+        "שרד",
+        "אבד",
+        "בדה"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 2,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 0
+        }
+      ],
+      "dayDifficulty": 6
+    },
+    {
+      "id": 80,
+      "grid": [
+        "סתמ",
+        "אבה",
+        "בלל"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 2,
+          "col": 2
+        },
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 0
+        }
+      ],
+      "dayDifficulty": 6
+    },
+    {
+      "id": 81,
+      "grid": [
+        "נתז",
+        "אבה",
+        "הלמ"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 2
+        }
+      ],
+      "dayDifficulty": 6
+    },
+    {
+      "id": 82,
+      "grid": [
+        "שוט",
+        "אדה",
+        "באר"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 1
+        }
+      ],
+      "dayDifficulty": 6
+    },
+    {
+      "id": 83,
+      "grid": [
+        "דפס",
+        "אדמ",
+        "בהל"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 2,
+          "col": 0
+        }
+      ],
+      "dayDifficulty": 6
+    },
+    {
+      "id": 84,
+      "grid": [
+        "שלח",
+        "אבד",
+        "בהל"
+      ],
+      "difficulty": 4,
+      "prefilledCells": [
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 2
+        }
+      ],
+      "dayDifficulty": 6
+    },
+    {
+      "id": 85,
+      "grid": [
+        "בקע",
+        "אבד",
+        "סלפ"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 2,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        }
+      ],
+      "dayDifficulty": 6
+    },
+    {
+      "id": 86,
+      "grid": [
+        "זממ",
+        "באס",
+        "חנה"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 2,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 2
+        }
+      ],
+      "dayDifficulty": 6
+    },
+    {
+      "id": 87,
+      "grid": [
+        "טול",
+        "בדא",
+        "לאה"
+      ],
+      "difficulty": 6,
+      "prefilledCells": [
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 2,
+          "col": 2
+        }
+      ],
+      "dayDifficulty": 6
+    },
+    {
+      "id": 88,
+      "grid": [
+        "שחר",
+        "אבד",
+        "בלה"
+      ],
+      "difficulty": 4,
+      "prefilledCells": [
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 2,
+          "col": 1
+        }
+      ],
+      "dayDifficulty": 6
+    },
+    {
+      "id": 89,
+      "grid": [
+        "שופ",
+        "אדה",
+        "בהק"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 2,
+          "col": 2
+        }
+      ],
+      "dayDifficulty": 6
+    },
+    {
+      "id": 90,
+      "grid": [
+        "דרכ",
+        "אבד",
+        "בדר"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 0
+        }
+      ],
+      "dayDifficulty": 7
+    },
+    {
+      "id": 91,
+      "grid": [
+        "מרא",
+        "אבד",
+        "נדה"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 0
+        }
+      ],
+      "dayDifficulty": 7
+    },
+    {
+      "id": 92,
+      "grid": [
+        "קשת",
+        "באס",
+        "רפס"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 0
+        }
+      ],
+      "dayDifficulty": 7
+    },
+    {
+      "id": 93,
+      "grid": [
+        "שאל",
+        "אבה",
+        "בדה"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 2,
+          "col": 0
+        }
+      ],
+      "dayDifficulty": 7
+    },
+    {
+      "id": 94,
+      "grid": [
+        "משג",
+        "אבד",
+        "נהל"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 0
+        }
+      ],
+      "dayDifficulty": 7
+    },
+    {
+      "id": 95,
+      "grid": [
+        "צער",
+        "בדא",
+        "אנה"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 2
+        }
+      ],
+      "dayDifficulty": 7
+    },
+    {
+      "id": 96,
+      "grid": [
+        "רכנ",
+        "אבד",
+        "הדפ"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 2,
+          "col": 2
+        }
+      ],
+      "dayDifficulty": 7
+    },
+    {
+      "id": 97,
+      "grid": [
+        "שפע",
+        "אדמ",
+        "בהל"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 2,
+          "col": 2
+        }
+      ],
+      "dayDifficulty": 7
+    },
+    {
+      "id": 98,
+      "grid": [
+        "תמכ",
+        "אדה",
+        "בדה"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 2
+        }
+      ],
+      "dayDifficulty": 7
+    },
+    {
+      "id": 99,
+      "grid": [
+        "קרר",
+        "באס",
+        "להק"
+      ],
+      "difficulty": 4,
+      "prefilledCells": [
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 2,
+          "col": 2
+        }
+      ],
+      "dayDifficulty": 7
+    },
+    {
+      "id": 100,
+      "grid": [
+        "פלצ",
+        "אבד",
+        "רבד"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 2
+        }
+      ],
+      "dayDifficulty": 7
+    },
+    {
+      "id": 101,
+      "grid": [
+        "כוצ",
+        "אדה",
+        "באר"
+      ],
+      "difficulty": 6,
+      "prefilledCells": [
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 1
+        }
+      ],
+      "dayDifficulty": 7
+    },
+    {
+      "id": 102,
+      "grid": [
+        "חוב",
+        "בדא",
+        "באס"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 2,
+          "col": 2
+        }
+      ],
+      "dayDifficulty": 7
+    },
+    {
+      "id": 103,
+      "grid": [
+        "נזפ",
+        "אבד",
+        "קלה"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 2,
+          "col": 2
+        }
+      ],
+      "dayDifficulty": 7
+    },
+    {
+      "id": 104,
+      "grid": [
+        "כרת",
+        "אבה",
+        "בדה"
+      ],
+      "difficulty": 5,
+      "prefilledCells": [
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 2,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        }
+      ],
+      "dayDifficulty": 7
+    }
+  ]
+}
