@@ -43,6 +43,10 @@
     gameStore.setCellValue(row, col, value);
   }
 
+  function handleCellFocus(row: number, col: number) {
+    currentFocusedCell = { row, col };
+  }
+
   function handleKeyboardLetterClick(letter: string) {
     // Find the currently focused cell or first empty cell
     if (currentFocusedCell) {
@@ -60,6 +64,15 @@
             return;
           }
         }
+      }
+    }
+  }
+
+  function handleBackspace() {
+    if (currentFocusedCell) {
+      const { row, col } = currentFocusedCell;
+      if (!gameStore.grid[row][col].isPrefilled) {
+        gameStore.setCellValue(row, col, '');
       }
     }
   }
@@ -126,6 +139,7 @@
         <Grid
           grid={gameStore.grid}
           onCellInput={handleCellInput}
+          onCellFocus={handleCellFocus}
           onRevealRowHint={handleRevealRowHint}
           onRevealColHint={handleRevealColHint}
           revealedHints={gameStore.revealedSemanticHints}
@@ -133,7 +147,7 @@
         />
       {/if}
 
-      <Keyboard onLetterClick={handleKeyboardLetterClick} />
+      <Keyboard onLetterClick={handleKeyboardLetterClick} onBackspace={handleBackspace} />
 
       <div class="controls">
         <HintButton onReveal={handleRevealHint} disabled={!hasEmptyCells()} />

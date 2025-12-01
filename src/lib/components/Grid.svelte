@@ -10,13 +10,14 @@
   interface Props {
     grid: CellData[][];
     onCellInput: (row: number, col: number, value: string) => void;
+    onCellFocus?: (row: number, col: number) => void;
     onRevealRowHint?: (rowIndex: number) => void;
     onRevealColHint?: (colIndex: number) => void;
     revealedHints?: Set<string>;
     semanticHintMode?: boolean;
   }
 
-  let { grid, onCellInput, onRevealRowHint, onRevealColHint, revealedHints = new Set(), semanticHintMode = false }: Props = $props();
+  let { grid, onCellInput, onCellFocus, onRevealRowHint, onRevealColHint, revealedHints = new Set(), semanticHintMode = false }: Props = $props();
 
   let focusedCell = $state<{ row: number; col: number }>({ row: 0, col: 0 });
 
@@ -73,6 +74,9 @@
 
   function handleCellFocus(row: number, col: number) {
     focusedCell = { row, col };
+    if (onCellFocus) {
+      onCellFocus(row, col);
+    }
   }
 
   function handleKeyDown(event: KeyboardEvent) {

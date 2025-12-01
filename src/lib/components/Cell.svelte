@@ -36,16 +36,26 @@
 
   function handleInput(event: Event) {
     const target = event.target as HTMLInputElement;
-    const newValue = target.value.slice(-1); // Only last character
+    const inputValue = target.value;
 
-    // Only allow Hebrew characters
-    if (newValue && !/[\u0590-\u05FF]/.test(newValue)) {
-      target.value = value;
+    // If empty, clear the cell
+    if (!inputValue) {
+      onInput('');
       return;
     }
 
-    // Normalize final forms to regular forms
+    // Get the last character typed (in case of paste or multi-char input)
+    const newValue = inputValue.slice(-1);
+
+    // Only allow Hebrew characters
+    if (!/[\u0590-\u05FF]/.test(newValue)) {
+      target.value = value; // Restore previous value
+      return;
+    }
+
+    // Normalize final forms to regular forms and update
     const normalized = normalizeLetter(newValue);
+    target.value = normalized; // Set to single normalized character
     onInput(normalized);
   }
 
