@@ -97,7 +97,7 @@ function saveStats(stats: GameStats) {
 /**
  * Load current game from localStorage
  */
-function loadCurrentGame(): { grid: Cell[][], timer: number, hintsUsed: number, semanticHintsUsed: number, revealedSemanticHints: Set<string>, puzzleId: number } | null {
+function loadCurrentGame(): { grid: Cell[][], timer: number, hintsUsed: number, semanticHintsUsed: number, revealedSemanticHints: Set<string>, puzzleId: number, status: GameStatus } | null {
   if (typeof window === 'undefined') return null;
 
   try {
@@ -111,7 +111,8 @@ function loadCurrentGame(): { grid: Cell[][], timer: number, hintsUsed: number, 
       hintsUsed: parsed.hintsUsed || 0,
       semanticHintsUsed: parsed.semanticHintsUsed || 0,
       revealedSemanticHints: new Set(parsed.revealedSemanticHints || []),
-      puzzleId: parsed.puzzleId
+      puzzleId: parsed.puzzleId,
+      status: parsed.status || 'playing'
     };
   } catch {
     return null;
@@ -121,7 +122,7 @@ function loadCurrentGame(): { grid: Cell[][], timer: number, hintsUsed: number, 
 /**
  * Save current game to localStorage
  */
-function saveCurrentGame(grid: Cell[][], timer: number, hintsUsed: number, semanticHintsUsed: number, revealedSemanticHints: Set<string>, puzzleId: number) {
+function saveCurrentGame(grid: Cell[][], timer: number, hintsUsed: number, semanticHintsUsed: number, revealedSemanticHints: Set<string>, puzzleId: number, status: GameStatus) {
   if (typeof window === 'undefined') return;
 
   try {
@@ -131,7 +132,8 @@ function saveCurrentGame(grid: Cell[][], timer: number, hintsUsed: number, seman
       hintsUsed,
       semanticHintsUsed,
       revealedSemanticHints: Array.from(revealedSemanticHints),
-      puzzleId
+      puzzleId,
+      status
     }));
   } catch (error) {
     console.error('Failed to save game:', error);
@@ -225,6 +227,7 @@ export function createGameStore() {
       hintsUsed = savedGame.hintsUsed;
       semanticHintsUsed = savedGame.semanticHintsUsed;
       revealedSemanticHints = savedGame.revealedSemanticHints;
+      status = savedGame.status;
     } else {
       grid = Array.from({ length: 3 }, () =>
         Array.from({ length: 3 }, () => ({
@@ -278,25 +281,14 @@ export function createGameStore() {
     hintsUsed++;
   }
 
-  function revealRandomEmptyCell() {
-    // Find all empty, non-prefilled cells
-    const emptyCells: { row: number; col: number }[] = [];
-
-    for (let row = 0; row < 3; row++) {
-      for (let col = 0; col < 3; col++) {
-        if (!grid[row][col].isPrefilled && grid[row][col].value === '') {
-          emptyCells.push({ row, col });
-        }
-      }
-    }
-
-    if (emptyCells.length === 0) return;
-
-    // Pick a random empty cell
-    const randomIndex = Math.floor(Math.random() * emptyCells.length);
-    const { row, col } = emptyCells[randomIndex];
+  function revealFocusedCell(row: number, col: number): boolean {
+    if (!currentPuzzle) return false;
+    if (grid[row][col].isPrefilled) return false;
+    if (grid[row][col].isRevealed) return false;
+    if (grid[row][col].value !== '') return false;
 
     revealCell(row, col);
+    return true;
   }
 
   function revealSemanticHint(type: 'row' | 'col', index: number) {
@@ -413,7 +405,7 @@ Play at: [your-site-url]`;
     initializeGame,
     setCellValue,
     revealCell,
-    revealRandomEmptyCell,
+    revealFocusedCell,
     revealSemanticHint,
     resetGame,
     getShareText,
@@ -422,7 +414,7 @@ Play at: [your-site-url]`;
 
     saveGame() {
       if (currentPuzzle && grid.length > 0) {
-        saveCurrentGame(grid, timer, hintsUsed, semanticHintsUsed, revealedSemanticHints, currentPuzzle.id);
+        saveCurrentGame(grid, timer, hintsUsed, semanticHintsUsed, revealedSemanticHints, currentPuzzle.id, status);
       }
     },
     completeGame() {

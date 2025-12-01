@@ -4,7 +4,6 @@
   import { getTodaysPuzzle } from "$lib/utils/puzzle-selector";
   import Header from "$lib/components/Header.svelte";
   import Grid from "$lib/components/Grid.svelte";
-  import Keyboard from "$lib/components/Keyboard.svelte";
   import Timer from "$lib/components/Timer.svelte";
   import HintButton from "$lib/components/HintButton.svelte";
   import ShareModal from "$lib/components/ShareModal.svelte";
@@ -18,11 +17,16 @@
     // Initialize game with today's puzzle
     const { puzzle, prefilled } = getTodaysPuzzle();
     gameStore.initializeGame(puzzle, prefilled);
+
+    // If game was already completed, show share modal
+    if (gameStore.status === 'completed') {
+      showShareModal = true;
+    }
   });
 
   // Watch for game completion
   $effect(() => {
-    if (gameStore.isComplete()) {
+    if (gameStore.isComplete() && gameStore.status !== 'completed') {
       gameStore.completeGame();
       showShareModal = true;
     }
@@ -35,6 +39,7 @@
     gameStore.timer; // Track timer changes
     gameStore.hintsUsed; // Track hints changes
     gameStore.semanticHintsUsed; // Track semantic hints changes
+    gameStore.status; // Track status changes
 
     gameStore.saveGame();
   });
@@ -47,38 +52,11 @@
     currentFocusedCell = { row, col };
   }
 
-  function handleKeyboardLetterClick(letter: string) {
-    // Find the currently focused cell or first empty cell
-    if (currentFocusedCell) {
-      const { row, col } = currentFocusedCell;
-      if (!gameStore.grid[row][col].isPrefilled) {
-        gameStore.setCellValue(row, col, letter);
-      }
-    } else {
-      // Find first empty non-prefilled cell
-      for (let row = 0; row < 3; row++) {
-        for (let col = 0; col < 3; col++) {
-          const cell = gameStore.grid[row][col];
-          if (!cell.isPrefilled && cell.value === "") {
-            gameStore.setCellValue(row, col, letter);
-            return;
-          }
-        }
-      }
-    }
-  }
-
-  function handleBackspace() {
-    if (currentFocusedCell) {
-      const { row, col } = currentFocusedCell;
-      if (!gameStore.grid[row][col].isPrefilled) {
-        gameStore.setCellValue(row, col, '');
-      }
-    }
-  }
-
   function handleRevealHint() {
-    gameStore.revealRandomEmptyCell();
+    if (!currentFocusedCell) return;
+
+    const { row, col } = currentFocusedCell;
+    gameStore.revealFocusedCell(row, col);
   }
 
   function handleRevealRowHint(rowIndex: number) {
@@ -99,18 +77,14 @@
     showShareModal = false;
   }
 
-  const hasEmptyCells = $derived(() => {
+  const canRevealFocusedCell = $derived(() => {
+    if (!currentFocusedCell) return false;
     if (!gameStore.grid || gameStore.grid.length === 0) return false;
 
-    for (let row = 0; row < 3; row++) {
-      for (let col = 0; col < 3; col++) {
-        const cell = gameStore.grid[row][col];
-        if (!cell.isPrefilled && cell.value === "") {
-          return true;
-        }
-      }
-    }
-    return false;
+    const { row, col } = currentFocusedCell;
+    const cell = gameStore.grid[row][col];
+
+    return !cell.isPrefilled && !cell.isRevealed && cell.value === '';
   });
 </script>
 
@@ -129,7 +103,7 @@
     semanticHintsUsed={gameStore.semanticHintsUsed}
   />
 
-  <div class="game-container">
+  <div class="game-container" inert={gameStore.status === 'completed'}>
     <div class="main-area">
       <div class="game-info">
         <Timer seconds={gameStore.timer} />
@@ -147,10 +121,8 @@
         />
       {/if}
 
-      <Keyboard onLetterClick={handleKeyboardLetterClick} onBackspace={handleBackspace} />
-
       <div class="controls">
-        <HintButton onReveal={handleRevealHint} disabled={!hasEmptyCells()} />
+        <HintButton onReveal={handleRevealHint} disabled={!canRevealFocusedCell()} />
         <button
           type="button"
           class="hint-button"
@@ -162,17 +134,10 @@
           <span>{semanticHintMode ? "Cancel" : "Reveal Meaning"}</span>
         </button>
       </div>
-
-      <!-- Mobile: hints below keyboard -->
-      <div class="hints-mobile">
-        <SemanticHints hints={gameStore.semanticHints} />
-      </div>
-    </div>
-
-    <!-- Desktop: hints sidebar -->
-    <aside class="hints-sidebar">
+        
+      
       <SemanticHints hints={gameStore.semanticHints} />
-    </aside>
+    </div>
   </div>
 
   <ShareModal
@@ -201,7 +166,7 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
-    padding-block: 1.5rem;
+    padding: 1.5rem;
   }
 
   .main-area {
@@ -224,16 +189,6 @@
     flex-wrap: wrap;
   }
 
-  /* Mobile: show hints below keyboard, hide sidebar */
-  .hints-mobile {
-    display: block;
-    padding-inline: 1rem;
-  }
-
-  .hints-sidebar {
-    display: none;
-  }
-
   /* Desktop: show sidebar, hide mobile hints */
   @media (min-width: 1024px) {
     .game-container {
@@ -243,27 +198,15 @@
       gap: 1.5rem;
       padding-inline: 2rem;
     }
-
-    .hints-mobile {
-      display: none;
-    }
-
-    .hints-sidebar {
-      display: block;
-      position: sticky;
-      top: 2rem;
-      align-self: start;
-      max-height: calc(100vh - 4rem);
-      overflow-y: auto;
-    }
   }
 
   .hint-button {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
     padding: 0.75rem 1.25rem;
-    font-size: 1rem;
+    font-size: 0.875rem;
     font-weight: 600;
     border: 2px solid var(--color-border);
     border-radius: var(--border-radius);

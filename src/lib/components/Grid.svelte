@@ -188,7 +188,6 @@
   .grid-container {
     max-width: min(90vw, 450px);
     margin-inline: auto;
-    padding: 1rem;
   }
 
   .column-labels {

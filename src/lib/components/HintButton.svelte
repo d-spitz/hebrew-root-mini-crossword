@@ -11,7 +11,7 @@
   type="button"
   class="hint-button"
   onclick={onReveal}
-  disabled={disabled}
+  {disabled}
   aria-label="Reveal a letter hint"
 >
   <span class="hint-icon" aria-hidden="true">💡</span>
@@ -25,7 +25,7 @@
     justify-content: center;
     gap: 0.5rem;
     padding: 0.75rem 1.5rem;
-    font-size: clamp(0.875rem, 2.5vw, 1rem);
+    font-size: 0.875rem;
     font-weight: 600;
     border: 2px solid var(--color-border);
     border-radius: var(--border-radius);

@@ -75,6 +75,8 @@
   {value}
   readonly={isPrefilled}
   disabled={isPrefilled}
+  lang="he"
+  dir="rtl"
   class="cell"
   class:prefilled={isPrefilled}
   class:revealed={isRevealed}
