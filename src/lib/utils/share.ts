@@ -20,7 +20,6 @@ export function generateShareText(
   timeSeconds: number,
   hintsUsed: number,
   streak: number,
-  siteUrl: string = window.location.origin,
 ): string {
   const timeStr = formatTime(timeSeconds);
 
@@ -28,8 +27,7 @@ export function generateShareText(
 ⏱️ ${timeStr}
 💡 ${hintsUsed} hint${hintsUsed === 1 ? '' : 's'}
 🔥 ${streak} day streak
-
-${siteUrl}`;
+`;
 }
 
 /**

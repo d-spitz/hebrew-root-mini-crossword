@@ -362,23 +362,6 @@ export function createGameStore() {
     clearCurrentGame();
   }
 
-  function getShareText(): string {
-    if (!currentPuzzle) return '';
-
-    const minutes = Math.floor(timer / 60);
-    const seconds = timer % 60;
-    const timeStr = `${minutes}:${seconds.toString().padStart(2, '0')}`;
-
-    const totalHints = hintsUsed + semanticHintsUsed;
-
-    return `Hebrew Mini Crossword #${currentPuzzle.id}
-Time: ${timeStr}
-Hints: ${totalHints}
-Streak: ${stats.streak}
-
-Play at: [your-site-url]`;
-  }
-
   const alternativeSolutionsCount = $derived(() => {
     if (!currentPuzzle) return 0;
     return stats.alternativeSolutions.get(currentPuzzle.id)?.size || 0;
@@ -408,7 +391,6 @@ Play at: [your-site-url]`;
     revealFocusedCell,
     revealSemanticHint,
     resetGame,
-    getShareText,
     startTimer,
     stopTimer,
 

@@ -239,7 +239,7 @@
 
   .grid-row {
     display: grid;
-    grid-template-columns: 2rem 1fr 2rem;
+    grid-template-columns: 1rem 1fr 1rem;
     gap: clamp(0.5rem, 2vw, 0.75rem);
     margin-block-end: clamp(0.5rem, 2vw, 0.75rem);
   }

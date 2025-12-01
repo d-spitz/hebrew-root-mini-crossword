@@ -135,7 +135,7 @@
           : "Reveal row/column meaning"}
       >
         <span class="hint-icon" aria-hidden="true">📖</span>
-        <span>{semanticHintMode ? "Cancel" : "Reveal Meaning"}</span>
+        <span>{semanticHintMode ? "Cancel" : "Meaning"}</span>
       </button>
     </div>
 
@@ -182,7 +182,6 @@
     justify-content: center;
     gap: 1rem;
     padding-inline: 1rem;
-    flex-wrap: wrap;
   }
 
   /* Desktop: show sidebar, hide mobile hints */
@@ -201,7 +200,7 @@
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    padding: 0.75rem 1.25rem;
+    padding: 0.5rem 0.75rem;
     font-size: 0.875rem;
     font-weight: 600;
     border: 2px solid var(--color-border);
