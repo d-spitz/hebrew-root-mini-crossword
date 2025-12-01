@@ -57,7 +57,7 @@ export async function shareViaWebShare(
   const shareData = {
     title,
     text,
-    url: window.location.origin,
+    url: window.location.href,
   };
   if (!navigator?.canShare(shareData)) {
     return false;
@@ -67,7 +67,7 @@ export async function shareViaWebShare(
     await navigator.share({
       title,
       text,
-      url: window.location.origin,
+      url: window.location.href,
     });
     return true;
   } catch (error) {
