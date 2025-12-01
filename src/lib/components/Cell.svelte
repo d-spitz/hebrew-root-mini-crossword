@@ -27,7 +27,6 @@
 
   let inputElement = $state<HTMLInputElement | null>(null);
 
-  // Focus the input when this cell is focused
   $effect(() => {
     if (isFocused && inputElement && !isPrefilled) {
       inputElement.focus();
@@ -38,32 +37,45 @@
     const target = event.target as HTMLInputElement;
     const inputValue = target.value;
 
-    // If empty, clear the cell
     if (!inputValue) {
       onInput('');
       return;
     }
 
-    // Get the last character typed (in case of paste or multi-char input)
-    const newValue = inputValue.slice(-1);
-
-    // Only allow Hebrew characters
-    if (!/[\u0590-\u05FF]/.test(newValue)) {
-      target.value = value; // Restore previous value
+    const newChar = inputValue.slice(-1);
+    
+    if (!/[\u0590-\u05FF]/.test(newChar)) {
+      target.value = value;
       return;
     }
 
-    // Normalize final forms to regular forms and update
-    const normalized = normalizeLetter(newValue);
-    target.value = normalized; // Set to single normalized character
+    const normalized = normalizeLetter(newChar);
+    
+    // Replace input value completely
+    target.value = normalized;
     onInput(normalized);
   }
 
   function handleKeyDown(event: KeyboardEvent) {
-    // Allow backspace/delete to clear
     if (event.key === 'Backspace' || event.key === 'Delete') {
       onInput('');
       event.preventDefault();
+    }
+  }
+
+  function handleBeforeInput(event: InputEvent) {
+    // When cell has a value, prevent adding more characters
+    if (value && event.data && event.inputType === 'insertText') {
+      event.preventDefault();
+      
+      // Replace with new character if it's Hebrew
+      if (/[\u0590-\u05FF]/.test(event.data)) {
+        const normalized = normalizeLetter(event.data);
+        if (inputElement) {
+          inputElement.value = normalized;
+        }
+        onInput(normalized);
+      }
     }
   }
 </script>
@@ -72,6 +84,7 @@
   bind:this={inputElement}
   type="text"
   maxlength="1"
+  pattern="[\u0590-\u05FF]"
   {value}
   readonly={isPrefilled}
   disabled={isPrefilled}
@@ -82,6 +95,7 @@
   class:revealed={isRevealed}
   class:focused={isFocused}
   class:invalid={isInvalid}
+  onbeforeinput={handleBeforeInput}
   oninput={handleInput}
   onkeydown={handleKeyDown}
   onfocus={onFocus}
