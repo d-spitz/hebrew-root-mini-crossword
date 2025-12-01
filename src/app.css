@@ -35,6 +35,18 @@
 
   --color-correct: light-dark(#22c55e, #4ade80);
   --color-error: light-dark(#ef4444, #f87171);
+
+  /* Semantic hints colors */
+  --color-hint-bg: light-dark(#eff6ff, #1e3a5f);
+  --color-hint-border: light-dark(#bfdbfe, #3b82f6);
+  --color-hint-text: light-dark(#1e40af, #bfdbfe);
+
+  /* Row/column hover colors */
+  --color-row-hover: light-dark(#fef3c7, #422006);
+  --color-col-hover: light-dark(#e0e7ff, #312e81);
+
+  /* Typography */
+  --font-hebrew: 'Arial', 'Noto Sans Hebrew', sans-serif;
 }
 
 /* Reset and base styles */

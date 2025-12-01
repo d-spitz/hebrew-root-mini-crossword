@@ -4,6 +4,7 @@
  */
 
 import { getSolutionKey, validateGrid } from '../utils/validator';
+import { roots } from '$lib/roots';
 
 interface Cell {
   value: string;           // Current letter (empty string if not filled)
@@ -25,6 +26,14 @@ interface GameStats {
 }
 
 type GameStatus = 'playing' | 'completed';
+
+interface SemanticHint {
+  key: string;
+  type: 'row' | 'col';
+  index: number;
+  root: string;
+  meaning: string;
+}
 
 const STORAGE_KEY_STATS = 'hebrew-crossword-stats';
 const STORAGE_KEY_GAME = 'hebrew-crossword-current-game';
@@ -88,7 +97,7 @@ function saveStats(stats: GameStats) {
 /**
  * Load current game from localStorage
  */
-function loadCurrentGame(): { grid: Cell[][], timer: number, hintsUsed: number, semanticHintsUsed: number, puzzleId: number } | null {
+function loadCurrentGame(): { grid: Cell[][], timer: number, hintsUsed: number, semanticHintsUsed: number, revealedSemanticHints: Set<string>, puzzleId: number } | null {
   if (typeof window === 'undefined') return null;
 
   try {
@@ -101,6 +110,7 @@ function loadCurrentGame(): { grid: Cell[][], timer: number, hintsUsed: number, 
       timer: parsed.timer || 0,
       hintsUsed: parsed.hintsUsed || 0,
       semanticHintsUsed: parsed.semanticHintsUsed || 0,
+      revealedSemanticHints: new Set(parsed.revealedSemanticHints || []),
       puzzleId: parsed.puzzleId
     };
   } catch {
@@ -111,7 +121,7 @@ function loadCurrentGame(): { grid: Cell[][], timer: number, hintsUsed: number, 
 /**
  * Save current game to localStorage
  */
-function saveCurrentGame(grid: Cell[][], timer: number, hintsUsed: number, semanticHintsUsed: number, puzzleId: number) {
+function saveCurrentGame(grid: Cell[][], timer: number, hintsUsed: number, semanticHintsUsed: number, revealedSemanticHints: Set<string>, puzzleId: number) {
   if (typeof window === 'undefined') return;
 
   try {
@@ -120,6 +130,7 @@ function saveCurrentGame(grid: Cell[][], timer: number, hintsUsed: number, seman
       timer,
       hintsUsed,
       semanticHintsUsed,
+      revealedSemanticHints: Array.from(revealedSemanticHints),
       puzzleId
     }));
   } catch (error) {
@@ -139,12 +150,16 @@ function clearCurrentGame() {
  * Create the game state store
  */
 export function createGameStore() {
+  // Create a Map for O(1) root lookups
+  const rootsMap = new Map(roots.map(r => [r.root, r.meaning]));
+
   // State
   let grid = $state<Cell[][]>([]);
   let currentPuzzle = $state<Puzzle | null>(null);
   let timer = $state(0);
   let hintsUsed = $state(0);
   let semanticHintsUsed = $state(0);
+  let revealedSemanticHints = $state<Set<string>>(new Set());
   let status = $state<GameStatus>('playing');
   let stats = $state<GameStats>(loadStats());
   let timerInterval: ReturnType<typeof setInterval> | null = null;
@@ -165,6 +180,39 @@ export function createGameStore() {
 
   const isValid = $derived(() => true);
 
+  const semanticHints = $derived.by((): SemanticHint[] => {
+    if (!currentPuzzle) return [];
+
+    const hints: SemanticHint[] = [];
+
+    for (const key of revealedSemanticHints) {
+      const [type, indexStr] = key.split('-');
+      const index = parseInt(indexStr);
+
+      let root: string;
+      if (type === 'row') {
+        root = currentPuzzle.grid[index];
+      } else {
+        // Extract column root
+        root = currentPuzzle.grid[0][index] +
+               currentPuzzle.grid[1][index] +
+               currentPuzzle.grid[2][index];
+      }
+
+      const meaning = rootsMap.get(root) ?? 'Meaning not available';
+
+      hints.push({
+        key,
+        type: type as 'row' | 'col',
+        index,
+        root,
+        meaning
+      });
+    }
+
+    return hints;
+  });
+
   // Methods
   function initializeGame(puzzle: Puzzle, prefilledPositions: { row: number; col: number }[]) {
     currentPuzzle = puzzle;
@@ -176,6 +224,7 @@ export function createGameStore() {
       timer = savedGame.timer;
       hintsUsed = savedGame.hintsUsed;
       semanticHintsUsed = savedGame.semanticHintsUsed;
+      revealedSemanticHints = savedGame.revealedSemanticHints;
     } else {
       grid = Array.from({ length: 3 }, () =>
         Array.from({ length: 3 }, () => ({
@@ -197,6 +246,8 @@ export function createGameStore() {
 
       timer = 0;
       hintsUsed = 0;
+      semanticHintsUsed = 0;
+      revealedSemanticHints = new Set();
     }
 
     status = 'playing';
@@ -246,6 +297,17 @@ export function createGameStore() {
     const { row, col } = emptyCells[randomIndex];
 
     revealCell(row, col);
+  }
+
+  function revealSemanticHint(type: 'row' | 'col', index: number) {
+    const key = `${type}-${index}`;
+
+    // Don't re-count if already revealed
+    if (revealedSemanticHints.has(key)) return;
+
+    // Create new Set to trigger reactivity
+    revealedSemanticHints = new Set(revealedSemanticHints).add(key);
+    semanticHintsUsed++;
   }
 
   function startTimer() {
@@ -301,6 +363,8 @@ export function createGameStore() {
     currentPuzzle = null;
     timer = 0;
     hintsUsed = 0;
+    semanticHintsUsed = 0;
+    revealedSemanticHints = new Set();
     status = 'playing';
     stopTimer();
     clearCurrentGame();
@@ -313,9 +377,11 @@ export function createGameStore() {
     const seconds = timer % 60;
     const timeStr = `${minutes}:${seconds.toString().padStart(2, '0')}`;
 
+    const totalHints = hintsUsed + semanticHintsUsed;
+
     return `Hebrew Mini Crossword #${currentPuzzle.id}
 Time: ${timeStr}
-Hints: ${hintsUsed}
+Hints: ${totalHints}
 Streak: ${stats.streak}
 
 Play at: [your-site-url]`;
@@ -332,6 +398,9 @@ Play at: [your-site-url]`;
     get currentPuzzle() { return currentPuzzle; },
     get timer() { return timer; },
     get hintsUsed() { return hintsUsed; },
+    get semanticHintsUsed() { return semanticHintsUsed; },
+    get revealedSemanticHints() { return revealedSemanticHints; },
+    get semanticHints() { return semanticHints; },
     get status() { return status; },
     set status(value) { status = value; },
     get stats() { return stats; },
@@ -345,6 +414,7 @@ Play at: [your-site-url]`;
     setCellValue,
     revealCell,
     revealRandomEmptyCell,
+    revealSemanticHint,
     resetGame,
     getShareText,
     startTimer,
@@ -352,7 +422,7 @@ Play at: [your-site-url]`;
 
     saveGame() {
       if (currentPuzzle && grid.length > 0) {
-        saveCurrentGame(grid, timer, hintsUsed, currentPuzzle.id);
+        saveCurrentGame(grid, timer, hintsUsed, semanticHintsUsed, revealedSemanticHints, currentPuzzle.id);
       }
     },
     completeGame() {

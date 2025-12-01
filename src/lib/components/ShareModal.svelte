@@ -16,6 +16,7 @@
     puzzleId: number;
     timeSeconds: number;
     hintsUsed: number;
+    semanticHintsUsed?: number;
     streak: number;
     grid: CellData[][];
     isAlternativeSolution: boolean;
@@ -28,6 +29,7 @@
     puzzleId,
     timeSeconds,
     hintsUsed,
+    semanticHintsUsed = 0,
     streak,
     grid,
     isAlternativeSolution,
@@ -35,11 +37,13 @@
     onClose,
   }: Props = $props();
 
+  const totalHints = $derived(hintsUsed + semanticHintsUsed);
+
   let dialogElement = $state<HTMLDialogElement | null>(null);
   let copyStatus = $state<"idle" | "copied" | "error">("idle");
 
   const shareText = $derived(() =>
-    generateShareText(puzzleId, timeSeconds, hintsUsed, streak),
+    generateShareText(puzzleId, timeSeconds, totalHints, streak),
   );
 
   // Handle dialog open/close based on isOpen prop
@@ -111,7 +115,7 @@
 
       <div class="stat-card">
         <div class="stat-label">💡</div>
-        <div class="stat-value">{hintsUsed}</div>
+        <div class="stat-value">{totalHints}</div>
       </div>
 
       <div class="stat-card">

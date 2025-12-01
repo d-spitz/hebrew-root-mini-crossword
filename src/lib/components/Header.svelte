@@ -2,9 +2,12 @@
   interface Props {
     streak?: number;
     hintsUsed?: number;
+    semanticHintsUsed?: number;
   }
 
-  let { streak = 0, hintsUsed = 0 }: Props = $props();
+  let { streak = 0, hintsUsed = 0, semanticHintsUsed = 0 }: Props = $props();
+
+  const totalHints = $derived(hintsUsed + semanticHintsUsed);
 </script>
 
 <header class="header">
@@ -18,10 +21,10 @@
       </div>
     {/if}
 
-    {#if hintsUsed > 0}
-      <div class="stat" aria-label={`${hintsUsed} hints used`}>
+    {#if totalHints > 0}
+      <div class="stat" aria-label={`${totalHints} hints used`}>
         <span class="stat-icon" aria-hidden="true">💡</span>
-        <span class="stat-value">{hintsUsed}</span>
+        <span class="stat-value">{totalHints}</span>
       </div>
     {/if}
   </div>
