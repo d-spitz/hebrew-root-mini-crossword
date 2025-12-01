@@ -144,7 +144,7 @@
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     max-width: 500px;
     width: calc(100% - 2rem);
-    max-height: 90vh;
+    max-height: 90dvh;
     padding: 0;
     overflow: hidden;
     margin: auto;

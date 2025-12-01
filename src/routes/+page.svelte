@@ -19,14 +19,14 @@
     gameStore.initializeGame(puzzle, prefilled);
 
     // If game was already completed, show share modal
-    if (gameStore.status === 'completed') {
+    if (gameStore.status === "completed") {
       showShareModal = true;
     }
   });
 
   // Watch for game completion
   $effect(() => {
-    if (gameStore.isComplete() && gameStore.status !== 'completed') {
+    if (gameStore.isComplete() && gameStore.status !== "completed") {
       gameStore.completeGame();
       showShareModal = true;
     }
@@ -60,12 +60,12 @@
   }
 
   function handleRevealRowHint(rowIndex: number) {
-    gameStore.revealSemanticHint('row', rowIndex);
+    gameStore.revealSemanticHint("row", rowIndex);
     semanticHintMode = false; // Turn off mode after revealing
   }
 
   function handleRevealColHint(colIndex: number) {
-    gameStore.revealSemanticHint('col', colIndex);
+    gameStore.revealSemanticHint("col", colIndex);
     semanticHintMode = false; // Turn off mode after revealing
   }
 
@@ -84,7 +84,7 @@
     const { row, col } = currentFocusedCell;
     const cell = gameStore.grid[row][col];
 
-    return !cell.isPrefilled && !cell.isRevealed && cell.value === '';
+    return !cell.isPrefilled && !cell.isRevealed && cell.value === "";
   });
 </script>
 
@@ -103,41 +103,43 @@
     semanticHintsUsed={gameStore.semanticHintsUsed}
   />
 
-  <div class="game-container" inert={gameStore.status === 'completed'}>
-    <div class="main-area">
-      <div class="game-info">
-        <Timer seconds={gameStore.timer} />
-      </div>
-
-      {#if gameStore.grid.length > 0}
-        <Grid
-          grid={gameStore.grid}
-          onCellInput={handleCellInput}
-          onCellFocus={handleCellFocus}
-          onRevealRowHint={handleRevealRowHint}
-          onRevealColHint={handleRevealColHint}
-          revealedHints={gameStore.revealedSemanticHints}
-          semanticHintMode={semanticHintMode}
-        />
-      {/if}
-
-      <div class="controls">
-        <HintButton onReveal={handleRevealHint} disabled={!canRevealFocusedCell()} />
-        <button
-          type="button"
-          class="hint-button"
-          class:active={semanticHintMode}
-          onclick={toggleSemanticHintMode}
-          aria-label={semanticHintMode ? "Cancel reveal meaning" : "Reveal row/column meaning"}
-        >
-          <span class="hint-icon" aria-hidden="true">📖</span>
-          <span>{semanticHintMode ? "Cancel" : "Reveal Meaning"}</span>
-        </button>
-      </div>
-        
-      
-      <SemanticHints hints={gameStore.semanticHints} />
+  <div class="game-container" inert={gameStore.status === "completed"}>
+    <div class="game-info">
+      <Timer seconds={gameStore.timer} />
     </div>
+
+    {#if gameStore.grid.length > 0}
+      <Grid
+        grid={gameStore.grid}
+        onCellInput={handleCellInput}
+        onCellFocus={handleCellFocus}
+        onRevealRowHint={handleRevealRowHint}
+        onRevealColHint={handleRevealColHint}
+        revealedHints={gameStore.revealedSemanticHints}
+        {semanticHintMode}
+      />
+    {/if}
+
+    <div class="controls">
+      <HintButton
+        onReveal={handleRevealHint}
+        disabled={!canRevealFocusedCell()}
+      />
+      <button
+        type="button"
+        class="hint-button"
+        class:active={semanticHintMode}
+        onclick={toggleSemanticHintMode}
+        aria-label={semanticHintMode
+          ? "Cancel reveal meaning"
+          : "Reveal row/column meaning"}
+      >
+        <span class="hint-icon" aria-hidden="true">📖</span>
+        <span>{semanticHintMode ? "Cancel" : "Reveal Meaning"}</span>
+      </button>
+    </div>
+
+    <SemanticHints hints={gameStore.semanticHints} />
   </div>
 
   <ShareModal
@@ -156,23 +158,17 @@
 
 <style>
   main {
-    min-height: 100vh;
+    min-block-size: 100dvh;
     display: flex;
     flex-direction: column;
   }
 
   .game-container {
     flex: 1;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    padding: 1.5rem;
-  }
-
-  .main-area {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    padding: 1.5rem;
   }
 
   .game-info {
